@@ -1,0 +1,156 @@
+@font-face {
+    font-family: font;
+    src: url(fonts/font.ttf);
+}
+
+* {
+    font-family: font;
+    color: white;
+}
+
+body, html {
+    background: linear-gradient(to bottom right, rgb(0, 0, 58), black);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background-color: #1d1d1d;
+    width: 100%;
+    height: 50px;
+}
+
+li {
+    display: inline;
+    float: left;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+}
+
+a {
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    text-decoration-color: gray;
+}
+
+code {
+    font-family: monospace;
+    background-color: #2d2d2d;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button {
+    background: darkblue;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    scale: 1.1;
+    filter: brightness(0.9);
+}
+
+#playercontainer {
+    background-color: rgba(255, 255, 255, 0.132);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    height: fit-content;
+    width: 300px;
+    padding: 15px;
+}
+
+#music-info {
+    display: flex;
+    justify-content: left;
+    width: 90%;
+    vertical-align: middle;
+}
+
+#music-info img {
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    filter: drop-shadow(0 0 15px rgba(218, 165, 32, 0.528));
+}
+
+#music-info h1 {
+    margin: 5px;
+    font-size: 23px;
+    color: white;
+    margin-top: 7.5px;
+    margin-bottom: -20px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: -10px;
+}
+
+#controls svg {
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#controls svg:hover {
+    scale: 1.2;
+}
+
+
+#progress {
+    height: 4px;
+    width: 95%;
+    position: relative;
+    left: 50%;
+    margin-bottom: -5px;
+    transform: translateX(-50%);
+    border-radius: 10000px;
+    margin-bottom: -7px;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+#progress-fill {
+    height: 4px;
+    width: 0%;
+    position: relative;
+    left: 0;
+    top: 0;
+    border-radius: 100000px;
+    background: white;
+    animation: progress 143s linear;
+    animation-play-state: paused;
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.vflex {
+    display: flex;
+    flex-direction: column;
+}
+
+#music-info p i {
+    color: rgb(148, 148, 148);
+    font-size: 13px;
+    margin-left: 5px;
+}
